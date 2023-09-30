@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 <style>
+    body {
+        background-image: url('download.jfif');
+    }
     .myDiv {
         height: 100px;
-       
         background-color:azure;
         text-align: center;
     }
@@ -26,14 +28,25 @@
         <p><a href="favorite.html">Favorites</a>.</p>
         <p><a href="skills.html">How to</a>.</p>
         <p><a href="spots.html">NYC</a>.</p>
-        <img src = "images/tylerdora.jpg" alt = "image" style = "width:300x;height:400px;">
-        <iframe src="https://www.youtube.com/embed/Wls6AmId3yk" width="500px" height="300px" title="atomic sneeze">
-        </iframe>
-
-        <audio controls autoplay>
-            <source src="outro.mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-          </audio>
+        <img src = "images/tylerdora.jpg" alt = "image" style = "width:300x;height:400px;" >
+        <video id = "video" controls>
+            <source src = "video/atomic_sneeze.mp4" type = "video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <button onclick="setCurTime()" type="button">Click me</button>
+        <audio id = "audio" controls>
+            <source src="audio/outro.mp3"  type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <script>
+            let audio = document.getElementById("audio");
+            let vid = document.getElementById("video");
+            function setCurTime() { 
+              audio.currentTime=11.8;
+              vid.currentTime = 0;
+              vid.play();
+            } 
+            </script> 
     </body>
 </h2>
 <body>
